@@ -7,7 +7,7 @@ import { Reader, Connection } from 'k6/x/kafka';
 import { Counter } from 'k6/metrics';
 
 // --- Configuration ---
-const KAFKA_BROKERS = (__ENV.KAFKA_BROKERS || 'localhost:9092').split(',');
+const KAFKA_BROKERS = (__ENV.KAFKA_BROKERS || 'localhost:9094').split(',');
 const KAFKA_TOPIC = __ENV.KAFKA_TOPIC || 'my-test-topic';
 const KAFKA_GROUP_ID = __ENV.KAFKA_GROUP_ID || 'k6-consumer-group';
 const CONSUME_TIMEOUT_MS = parseInt(__ENV.CONSUME_TIMEOUT_MS || '2000'); // Shorter timeout

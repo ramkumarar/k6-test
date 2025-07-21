@@ -8,7 +8,7 @@ import { Counter } from 'k6/metrics';
 import faker from 'k6/x/faker';
 
 // --- Configuration ---
-const KAFKA_BROKERS = (__ENV.KAFKA_BROKERS || 'localhost:9092').split(',');
+const KAFKA_BROKERS = (__ENV.KAFKA_BROKERS || 'localhost:9094').split(',');
 const KAFKA_TOPIC = __ENV.KAFKA_TOPIC || 'my-test-topic'; // Match consumer default
 const MESSAGES_PER_ITERATION = 10;
 const DELETE_TOPIC_ON_TEARDOWN = __ENV.DELETE_TOPIC_ON_TEARDOWN === 'true';
